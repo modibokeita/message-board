@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <ul>
+      <% messages.forEach(function(message) {%>
+        <li>
+          User: <%= message.user %>, Text: <%= message.text %>, Date: <%= message.added ? message.added.toLocaleString() : 'N/A' %>
+        </li>
+        <% }) %>
+    </ul>
+    <h2><a href="/new">Add new message</a></h2>
+  </body>
+</html>
